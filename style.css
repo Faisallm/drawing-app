@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* google fonts poppins */
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    /* default flex-direction is 
+    horizontal */
+    display: flex;
+    /* crossAxisAlignment */
+    align-items: center;
+    /* mainAxisAlignment */
+    justify-content: center;
+    /* minimum height
+    100% view height */
+    min-height: 100vh;
+    background: #4A98F7;
+}
+
+.container {
+    display: flex;
+    /* border: 1px solid #000; */
+    width: 100%;
+    max-width: 1050px;
+    /* gap between the tools-board
+    and drawing board, accomplish similar
+    results like margin-right */
+    gap: 10px;
+    padding: 10px;
+}
+
+section {
+    background: #fff;
+    border-radius: 7px;
+}
+
+.drawing-board {
+    /* occupy the remaining available space */
+    flex: 1;
+}
+
+.tools-board {
+    width: 210px;
+    /* top: 15px
+    left&right is 22px
+    bottom: 0 */
+    padding: 15px 22px 0;
+}
+
+.tools-board .row {
+    margin-bottom: 20px;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* this is a way writhing selectors
+this is the same as
+    .option span {}
+    .option label {} 
+    */
+
+.option :where(span,
+label) {
+    color: #546168;
+    padding-left: 10px;
+}
