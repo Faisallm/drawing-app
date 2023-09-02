@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faisal's Drawing App Javascript</title>
     <link rel="stylesheet" href="style.css">
+    <!-- the defer keyword means that the script 
+    will not load until the html page have finished
+    loading. For smooth user experience-->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -19,17 +23,17 @@
 
                 <ul class="options">
 
-                    <li class="option">
+                    <li class="option tool" id="rectangle">
                         <img src="icons/rectangle.svg">
                         <span>Rectangle</span>
                     </li>
 
-                    <li class="option">
+                    <li class="option tool" id="circle">
                         <img src="icons/circle.svg">
                         <span>Circle</span>
                     </li>
 
-                    <li class="option">
+                    <li class="option tool" id="triangle">
                         <img src="icons/triangle.svg">
                         <span>Triangle</span>
                     </li>
@@ -50,12 +54,12 @@
 
                 <ul class="options">
 
-                    <li class="option active">
+                    <li class="option active tool" id="brush">
                         <img src="icons/brush.svg">
                         <span>Brush</span>
                     </li>
 
-                    <li class="option">
+                    <li class="option tool" id="eraser">
                         <img src="icons/eraser.svg">
                         <span>Eraser</span>
                     </li>
@@ -91,7 +95,11 @@
 
         </section>
         <!-- drawing area -->
-        <section class="drawing-board"></section>
+        <section class="drawing-board">
+            <!-- the canvas element is used to draw graphics
+            on a web page. -->
+            <canvas></canvas>
+        </section>
     </div>
 </body>
 
